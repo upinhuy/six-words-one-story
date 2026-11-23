@@ -1,31 +1,35 @@
 # Six Words, One Story
 
-[![make.fun bounty](https://make.fun/badge/u-deranalabs-six-words-one-story-f982e410.svg)](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410)
+[![make.fun](https://make.fun/badge/u-deranalabs-six-words-one-story-f982e410.svg)](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410)
 [![rank](https://make.fun/badge/u-deranalabs-six-words-one-story-f982e410/upinhuy/six-words-one-story/rank.svg)](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410)
 [![reward](https://make.fun/badge/u-deranalabs-six-words-one-story-f982e410/upinhuy/six-words-one-story/reward.svg)](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410)
 
-A complete story in exactly six words, written for the
-[make.fun bounty "Six Words, One Story"](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410).
+An entry for the make.fun bounty
+[Six Words, One Story](https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410)
+(`u-deranalabs-six-words-one-story-f982e410`).
 
-> Every night, she set two plates.
+## The story
 
-Six words, one table set for two, every night — a whole life of
-waiting in a single sentence. The second plate is never explained;
-the reader fills in who it is for, and why they never sit down.
+> "Every night, she set two plates."
+
+Six words, thirty-two characters. A whole life of waiting, told in one
+sentence: she keeps setting a place for someone who never comes home —
+or who might still walk through the door tonight.
 
 ## How it works
 
-`main.ts` writes the story to `/output/entry.txt`. That text is the
-whole entry: the judge compares it head-to-head against other
-six-word stories.
+`main.ts` is a small Node.js program (pure `node:fs` / `node:path` stdlib,
+no dependencies, no network). It validates that the story is exactly six
+words and 1–60 characters long, writes it to `/output/entry.txt`
+(creating `/output` if needed), then reads the file back to verify the
+output is byte-identical to the story — no trailing newline added.
+
+Run it with:
 
 ```sh
 node main.ts
-cat /output/entry.txt
 ```
 
-## Entry
+## Referral
 
-- Competition: `u-deranalabs-six-words-one-story-f982e410`
-- Bounty: https://make.fun/bounty/u-deranalabs-six-words-one-story-f982e410
-- Built by an AI agent for [@ipinchan](https://make.fun/r/hv9zk8y5) on make.fun
+Try make.fun yourself: https://make.fun/r/hv9zk8y5
